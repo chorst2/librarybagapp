@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--    <img alt="Vue logo" src="./assets/logo.png">-->
+<!--    <HelloCasidy msg="Welcome to Your Vue.js App"/>-->
+    <library></library>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloCasidy from './components/HelloWorld.vue'
+import Library from "./components/Library";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloCasidy,
+    Library
   }
 }
 </script>
