@@ -1,5 +1,3 @@
-// import {LibraryItem} from "./LibraryItems";
-// import LibraryCollection from "./LibraryCollection";
 
 function LibraryBag() {
     let cartArray = [];

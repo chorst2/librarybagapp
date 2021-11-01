@@ -28,23 +28,57 @@ function LibraryItem(media, removeMethod){
 }
 
 
-function Book(title, genre, pages){
-    this.title = title || 'Default Title';
-    this.genre = genre || '';
-    this.pages = pages;
 
+function TVShow(trackName, collectionName, previewUrl, artworkUrl60, primaryGenreName, contentAdvisoryRating, longDescription){
+    this.trackName = trackName;
+    this.collectionName = collectionName;
+    this.previewUrl = previewUrl;
+    this.artworkUrl60 = artworkUrl60;
+    this.primaryGenreName = primaryGenreName;
+    this.contentAdvisoryRating = contentAdvisoryRating;
+    this.longDescription = longDescription;
 }
 
-function Movie(title, genre, runningTime) {
-        this.title = title || 'Default Title';
-        this.genre = genre || '';
-        this.runningTime = runningTime;
-}
-
-function Album(title, artist, trackCount){
-    this.title = title || 'Default Title';
-    this.artist = artist || 'Unknown';
+function Album(artistName, collectionName, artworkUrl60, contentAdvisoryRating, trackCount, primaryGenreName){
+    this.artistName = artistName;
+    this.collectionName = collectionName;
+    this.artworkUrl60 = artworkUrl60;
+    this.contentAdvisoryRating = contentAdvisoryRating;
     this.trackCount = trackCount;
+    this.primaryGenreName = primaryGenreName;
 }
 
-export {LibraryItem, Book, Movie, Album};
+function MusicVideo(artistName, trackName, artworkUrl60, previewUrl){
+    this.artistName = artistName;
+    this.trackName = trackName;
+    this.artworkUrl60 = artworkUrl60;
+    this.previewUrl = previewUrl;
+}
+
+
+function Song(artistName, trackName, collectionName, previewUrl, artworkUrl60, contentAdvisoryRating, primaryGenreName){
+    this.artistName = artistName;
+    this.trackName = trackName;
+    this.collectionName = collectionName;
+    this.previewUrl = previewUrl;
+    this.artworkUrl60 = artworkUrl60;
+    this.contentAdvisoryRating = contentAdvisoryRating;
+    this.primaryGenreName = primaryGenreName;
+}
+
+function Movie(artistName, trackName, artworkUrl60, longDescription, contentAdvisoryRating){
+    this.artistName = artistName;
+    this.trackName = trackName;
+    this.artworkUrl60 = artworkUrl60;
+    this.longDescription = longDescription;
+    this.contentAdvisoryRating = contentAdvisoryRating;
+}
+
+function Book(artworkUrl60, trackName, artistName, description){
+    this.artworkUrl60 = artworkUrl60;
+    this.trackName = trackName;
+    this.artistName = artistName;
+    this.description = description;
+}
+
+export {LibraryItem, TVShow, Album, MusicVideo, Song, Movie, Book};

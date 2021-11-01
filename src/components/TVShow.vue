@@ -6,10 +6,12 @@
     <b-col md="6">
       <b-card-text>
         <h3>{{item.trackName}}</h3>
-        <p>Director: {{item.artistName}}</p>
+        <p>Season: {{item.collectionName}}</p>
         <div v-if="showExtra">
-        <p v-if="item.longDescription">Description: {{item.longDescription}}</p>
-        <p v-if="item.contentAdvisoryRating">Rating: {{item.contentAdvisoryRating}}</p>
+          <p v-if="item.primaryGenreName">Genre: {{item.primaryGenreName}}</p>
+          <p v-if="item.contentAdvisoryRating">Rating: {{item.contentAdvisoryRating}}</p>
+          <p v-if="item.longDescription">Description: {{item.longDescription}}</p>
+          <audio :src="item.previewUrl" type="audio/x-m4a" controls ></audio>
         </div>
       </b-card-text>
     </b-col>
@@ -17,12 +19,12 @@
 </template>
 
 <script>
-import {Movie} from "../models/LibraryItems";
+import {TVShow} from "../models/LibraryItems";
 
 export default {
-  name: "Movie",
+  name: "TVShow",
   props: {
-    item: Movie,
+    item: TVShow,
     showExtra: {
       type: Boolean,
       default: true,

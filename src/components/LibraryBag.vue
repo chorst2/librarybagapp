@@ -5,6 +5,7 @@
         :item="item"
         :key="item.id"
         :remove-from-cart-function="(item) => model.removeFromCart(item)"
+
         >
     </bag-item>
 
